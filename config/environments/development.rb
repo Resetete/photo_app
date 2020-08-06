@@ -12,7 +12,7 @@ Rails.application.configure do
   # doesn't send emails in development -> test mode
   config.action_mailer.delivery_method = :test
   # the url is the local development root url --> often it will be localhost
-  config.action_mailer.default_url_options = { :host => 'localhost:4000' }
+  config.action_mailer.default_url_options = { :host => 'localhost', port: 4000 }
   # Show full error reports.
   config.consider_all_requests_local = true
 
