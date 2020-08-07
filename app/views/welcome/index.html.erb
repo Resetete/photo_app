@@ -1,2 +1,48 @@
-<h1> Welcome to the Photo App </h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<% if current_user %>
+  <h3> Welcome: <%= current_user.email %> </h3>
+<% else %>
+  <div class="jumbotron">
+    <h2> Welcome to the Photo App </h2>
+    <p class="lead">
+      You'll love managing your photos with our application. Sign up!
+    </p>
+    <small class="link"> <a href='https://www.freepik.com/vectors/vintage'>Vintage vector created by freepik - www.freepik.com</a> </small>
+  </div>
+  <div class="row">
+    <div class="plans clearfix">
+      <div class="col-lg-3 col-lg-offset-3 plan">
+        <h2> Premium Plan </h2>
+        <div class="price full-right">
+          Price: 10€
+        </div>
+        <div class="features">
+          <ul>
+            <li> Unlimited Image uploads </li>
+            <li> Responsive design </li>
+            <li> Access anywhere </li>
+          </ul>
+        </div>
+        <p>
+          <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-primary sign-up" %>
+        </p>
+      </div>
+      <div class="col-lg-3 col-lg-offset-3 plan">
+        <h2> Amaze plan </h2>
+        <div class="price full-right">
+          Price: 20€
+        </div>
+        <div class="features">
+          <ul>
+            <li> Unlimited Image uploads </li>
+            <li> Responsive design </li>
+            <li> Access anywhere </li>
+            <li class="extra"> Unlimited projects </li>
+          </ul>
+        </div>
+        <p>
+          <%= link_to 'Sign_up', new_user_registration_path, class: "btn btn-primary sign-up" %>
+        </p>
+      </div>
+    </div>
+  </div>
+<% end %>
