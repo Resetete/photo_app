@@ -11,7 +11,7 @@ Rails.application.configure do
   config.eager_load = true
 
   # sends emails in development -> smpt mode
-  config.action_mailer.delivery_method = :smpt
+  config.action_mailer.delivery_method = :smtp
   # the url is the heroku app url
   config.action_mailer.default_url_options = { :host => 'photo-app-theresa.herokuapp.com/', :protocol => 'https' }
 
