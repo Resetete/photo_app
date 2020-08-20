@@ -5,7 +5,7 @@ class PictureUploader < CarrierWave::Uploader::Base
   process resize_to_limit: [300, 300] # resize the image that are larger than 300, 300 they are automatically resized
 
   # Choose what kind of storage to use for this uploader:
-  if Rails.env.production # if we are in production then use fog if localhost, then storage :file
+  if Rails.env.production? # if we are in production then use fog if localhost, then storage :file
     storage :fog
   else
     storage :file
