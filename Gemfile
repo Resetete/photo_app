@@ -29,6 +29,14 @@ gem 'jquery-rails'
 # online payments
 gem 'stripe'
 
+# work with Amazon S3 bucket to store assets
+# image uploader
+gem 'carrierwave'
+# image resizer
+gem 'mini_magick'
+# work with images in production
+gem 'fog'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
